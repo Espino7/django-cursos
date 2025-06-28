@@ -1,0 +1,103 @@
+a<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+        <title>{% block title %}{% endblock title %}</title>
+
+        {% load static %}
+            <link href="{% static 'contenido/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+            <link href="{% static 'contenido/css/londinium-theme.css'%}" rel="stylesheet" type="text/css">
+            <link href="{% static 'contenido/css/styles.css'%}" rel="stylesheet" type="text/css">
+            <link href="{% static 'contenido/css/icons.css'%}" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+            <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+            <script type="text/javascript" src="js/plugins/charts/sparkline.min.js"></script>
+
+            <script type="text/javascript" src="js/plugins/forms/uniform.min.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/select2.min.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/inputmask.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/autosize.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/inputlimit.min.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/listbox.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/multiselect.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/validate.min.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/tags.min.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/switch.min.js"></script>
+
+            <script type="text/javascript" src="js/plugins/forms/uploader/plupload.full.min.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/uploader/plupload.queue.min.js"></script>
+
+            <script type="text/javascript" src="js/plugins/forms/wysihtml5/wysihtml5.min.js"></script>
+            <script type="text/javascript" src="js/plugins/forms/wysihtml5/toolbar.js"></script>
+
+            <script type="text/javascript" src="js/plugins/interface/daterangepicker.js"></script>
+            <script type="text/javascript" src="js/plugins/interface/fancybox.min.js"></script>
+            <script type="text/javascript" src="js/plugins/interface/moment.js"></script>
+            <script type="text/javascript" src="js/plugins/interface/jgrowl.min.js"></script>
+            <script type="text/javascript" src="js/plugins/interface/datatables.min.js"></script>
+            <script type="text/javascript" src="js/plugins/interface/colorpicker.js"></script>
+            <script type="text/javascript" src="js/plugins/interface/fullcalendar.min.js"></script>
+            <script type="text/javascript" src="js/plugins/interface/timepicker.min.js"></script>
+
+            <script src="{% static 'contenido/js/bootstrap.min.js' %}"></script>
+            <script type="text/javascript" src="js/application.js"></script>
+    </head>
+
+    <body>
+        <div class="page-container">
+            <!-- Navbar -->
+            <div class="navbar navbar-inverse navbar-custom" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'Principal' %}">
+                        <img src="{% static 'contenido/image/logo.png' %}" alt="Logo">
+                    </a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navbar-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            &#9776; <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'Contacto' %}">Contacto</a></li>
+                            <li><a href="{% url "Cursos" %}">Cursos</a></li>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Navbar -->
+
+            
+            
+            <!-- Contenido -->
+			{% block contenido %} 
+				<!-- Template Tag -->
+				<!-- Block sirve para indicar que colocaremos un bloque de contenido a traves de nuestras variable content -->
+			{% endblock %}
+            <!-- /Contenido-->
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-custom">
+            <div class="container">
+                <p class="mb-1">&copy; 2025 Cursos Web. Todos los derechos reservados.</p>
+                <small>Desarrollado con ❤️ para crear sitios y aplicaciones de manera fácil</small>
+            </div>
+        </footer>
+        <!-- /Footer -->
+
+
+        <script>
+            $(document).ready(function () {
+                $('.dropdown-toggle').dropdown();
+            });
+        </script>
+    </body>
+</html>
+

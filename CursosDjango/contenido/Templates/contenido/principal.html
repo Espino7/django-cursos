@@ -1,0 +1,112 @@
+{% extends "contenido/estructura.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block contenido %} 
+    <!-- Banner debajo del navbar -->
+    <div class="banner-inicio">
+        <div class="banner-contenido">
+            
+            <!-- Columna izquierda con texto -->
+            <div class="banner-texto">
+                <h1>Cursos de informática</h1>
+                <p>
+                    Aprende a crear aplicaciones y sitios web con diferentes frameworks para llenar tu portafolio profesional.
+                </p>
+            </div>
+
+            <!-- Línea vertical divisoria -->
+            <div class="banner-divisor"></div>
+
+            <!-- Columna derecha vacía -->
+            <div class="banner-extra">
+                <!-- Espacio para imagen, video, botón o contenido adicional -->
+            </div>
+        </div>
+    </div>
+    <!-- /Banner -->
+
+    <!--Encabezado -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Cursos destacados
+                <small>Podrás realizar tantos cursos como quieras, solo necesitas registrarte.</small>
+            </h3>
+        </div>
+    </div>
+    <!-- /Encabezado-->
+    
+    <!-- Cards -->
+    <div class="container my-4">
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100 border-0 rounded-4 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="{% static 'contenido/image/python.png' %}" class="img-card img-python" alt="python">
+                        </div>
+                        <div class="col-md-6 p-3 d-flex flex-column justify-content-between">
+                            <div>
+                                <small class="text-muted">Curso Web</small>
+                                <h5 class="mt-2 fw-bold">Framework Django<br><small>Aprende a usar python</small></h5>
+                                <a href="#" class="d-block text-decoration-none text-primary mb-1">
+                                    <i class="bi bi-bank"></i> Maestra Elena
+                                </a>
+                                <span class="badge bg-light text-dark border rounded-pill px-2 py-1">Sitios web</span>
+                            </div>
+                            <div class="mt-3">
+                                <span class="text-success me-2">●</span>
+                                <small class="text-muted">Abierto hasta 30 sept 25</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100 border-0 rounded-4 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="{% static 'contenido/image/laravel.png' %}" class="img-card img-laravel" alt="laravel">
+                        </div>
+                        <div class="col-md-6 p-3 d-flex flex-column justify-content-between">
+                            <div>
+                                <small class="text-muted">Cursos web web</small>
+                                <h5 class="mt-2 fw-bold">Laravel framework<br><small>Crea tu sitio web fácilmente</small></h5>
+                                <a href="#" class="d-block text-decoration-none text-primary mb-1">
+                                    <i class="bi bi-bank"></i> Maestro Julio  
+                                </a>
+                                <span class="badge bg-light text-dark border rounded-pill px-2 py-1">Sitios web</span>
+                            </div>
+                            <div class="mt-3">
+                                <span class="text-success me-2">●</span>
+                                <small class="text-muted">Abierto hasta 30 sept 25</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cards -->
+
+    <!-- Sección imagen lista -->
+    <div class="seccion-imagen-lista">
+        <div class="columna-izquierda">
+            <img src="{% static 'contenido/image/programador.png' %}" alt="Programador" class="imagen-grande">
+        </div>
+        <div class="columna-derecha">
+            <ul class="lista-roja">
+                <li>Aprende Python desde cero</li>
+                <li>Desarrolla sitios con Django</li>
+                <li>Diseña con Bootstrap y CSS</li>
+                <li>Conecta bases de datos</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /Sección imagen lista -->
+
+{% endblock %}
