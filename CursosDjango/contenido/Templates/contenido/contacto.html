@@ -1,0 +1,55 @@
+{% extends "contenido/estructura.html" %}
+{% load static %}
+
+{% block title %}Contacto{% endblock title %}
+
+{% block contenido %}
+
+<!-- Encabezado de contacto -->
+<div class="page-header text-center mb-5">
+    <div class="page-title">
+        <h3>Contáctanos</h3>
+        <small>Estamos disponibles en cualquiera de los siguientes medios:</small>
+    </div>
+</div>
+
+<!-- Sección de íconos de contacto -->
+<div class="container text-center mt-5">
+    <div class="row justify-content-center gy-4">
+
+        <!-- Facebook -->
+        <div class="col-6 col-md-3">
+            <a href="https://facebook.com/falsocurso" class="text-decoration-none text-dark" target="_blank">
+                <i class="bi bi-facebook" style="font-size: 48px; color: #3b5998;"></i>
+                <p class="mt-2">/falsocurso</p>
+            </a>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="col-6 col-md-3">
+            <a href="https://wa.me/5211234567890" class="text-decoration-none text-dark" target="_blank">
+                <i class="bi bi-whatsapp" style="font-size: 48px; color: #25D366;"></i>
+                <p class="mt-2">+52 1 123 456 7890</p>
+            </a>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="col-6 col-md-3">
+            <a href="tel:+5211234567890" class="text-decoration-none text-dark">
+                <i class="bi bi-telephone" style="font-size: 48px; color: #007bff;"></i>
+                <p class="mt-2">01 800 123 4567</p>
+            </a>
+        </div>
+
+        <!-- Gmail -->
+        <div class="col-6 col-md-3">
+            <a href="mailto:cursosweb@emailfalso.com" class="text-decoration-none text-dark">
+                <i class="bi bi-envelope-fill" style="font-size: 48px; color: #D44638;"></i>
+                <p class="mt-2">cursosweb@emailfalso.com</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

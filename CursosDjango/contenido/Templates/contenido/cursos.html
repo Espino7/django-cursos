@@ -1,0 +1,99 @@
+{% extends "contenido/estructura.html" %}
+{% load static %}
+
+{% block title %}Cursos{% endblock title %}
+
+{% block contenido %}
+
+<!-- Encabezado principal -->
+<div class="page-header">
+    <div class="page-title">
+        <h3>Nuestros cursos:<br>
+            <small>Los siguientes son nuestros cursos actualmente activos en los cuales puedes entrar:</small>
+        </h3>
+    </div>
+</div>
+
+<!-- Cards de cursos -->
+<div class="container my-4">
+    <div class="row g-4">
+
+        <!-- Card 1: Python / Django -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 border-0 rounded-4 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-12 text-center">
+                        <img src="{% static 'contenido/image/python.png' %}" alt="python" class="card-img-top p-3" style="height: 180px; object-fit: contain;">
+                    </div>
+                    <div class="col-md-12 p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <small class="text-muted">Curso Web</small>
+                            <h5 class="mt-2 fw-bold">Framework Django<br><small>Aprende a usar Python</small></h5>
+                            <a href="#" class="d-block text-decoration-none text-primary mb-1">
+                                <i class="bi bi-bank"></i> Maestra Elena
+                            </a>
+                            <span class="badge bg-light text-dark border rounded-pill px-2 py-1">Sitios web</span>
+                        </div>
+                        <div class="mt-3">
+                            <span class="text-success me-2">●</span>
+                            <small class="text-muted">Abierto hasta 30 sept 25</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Laravel -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 border-0 rounded-4 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-12 text-center">
+                        <img src="{% static 'contenido/image/laravel.png' %}" alt="laravel" class="card-img-top p-3" style="height: 180px; object-fit: contain;">
+                    </div>
+                    <div class="col-md-12 p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <small class="text-muted">Cursos Web</small>
+                            <h5 class="mt-2 fw-bold">Laravel framework<br><small>Crea tu sitio web fácilmente</small></h5>
+                            <a href="#" class="d-block text-decoration-none text-primary mb-1">
+                                <i class="bi bi-bank"></i> Maestro Julio
+                            </a>
+                            <span class="badge bg-light text-dark border rounded-pill px-2 py-1">Sitios web</span>
+                        </div>
+                        <div class="mt-3">
+                            <span class="text-success me-2">●</span>
+                            <small class="text-muted">Abierto hasta 30 sept 25</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: React Native -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 border-0 rounded-4 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-12 text-center">
+                        <img src="{% static 'contenido/image/react-native.png' %}" alt="react native" class="card-img-top p-3" style="height: 180px; object-fit: contain;">
+                    </div>
+                    <div class="col-md-12 p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <small class="text-muted">Aplicaciones móviles</small>
+                            <h5 class="mt-2 fw-bold">React Native<br><small>Crea apps móviles multiplataforma</small></h5>
+                            <a href="#" class="d-block text-decoration-none text-primary mb-1">
+                                <i class="bi bi-bank"></i> Maestra María Elena
+                            </a>
+                            <span class="badge bg-info text-white border rounded-pill px-2 py-1">Apps móviles</span>
+                        </div>
+                        <div class="mt-3">
+                            <span class="text-success me-2">●</span>
+                            <small class="text-muted">Abierto hasta 30 sept 25</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

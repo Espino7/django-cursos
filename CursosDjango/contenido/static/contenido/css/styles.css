@@ -1,0 +1,153 @@
+/* Estilo para el navbar */
+.navbar-custom {
+    background-color: #ffae19;
+}
+
+/* Estilo para el logo */
+.navbar-brand img {
+    height: 100%;
+    max-height: 100%;
+    margin-top:-8px;
+}
+
+/* Estilo para el ícono del menú desplegable */
+.navbar-dropdown-toggle {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Footer personalizado */
+.footer-custom {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-custom .mb-1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Banner de inicio */
+.banner-inicio {
+    margin-top: 30px;
+    background-color: #ffe4b2;
+    padding: 40px 20px;
+}
+
+.banner-contenido {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    align-items: center;
+}
+
+.banner-texto {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.banner-texto h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 32px;
+    color: #000;
+}
+
+.banner-texto p {
+    font-size: 16px;
+    text-align: left;
+    color: #555;
+}
+
+.banner-divisor {
+    width: 1px;
+    background-color: #000;
+    height: 100px;
+    margin: 0 20px;
+}
+
+.banner-extra {
+    flex: 1;
+}
+
+/* Encabezado de página */
+.page-header {
+    margin-left: 30px;
+}
+
+/* Imagen de las tarjetas */
+.img-card {
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.img-python {
+    height: 10%;
+    width: 47%;
+}
+
+.img-laravel {
+    width: 80%;
+}
+
+/* Sección imagen */
+.seccion-imagen-lista {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Opcional: mejor para pantallas pequeñas */
+}
+
+.columna-izquierda {
+    flex: 1;
+    text-align: center;
+}
+
+.imagen-grande {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.columna-derecha {
+    flex: 1;
+}
+
+.lista-roja {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.lista-roja li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+
+.lista-roja li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: red;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.bi {
+    transition: transform 0.3s;
+}
+
+.bi:hover {
+    transform: scale(1.1);
+}
+
