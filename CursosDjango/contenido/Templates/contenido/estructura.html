@@ -1,4 +1,4 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="utf-8">
@@ -12,6 +12,7 @@ a<!DOCTYPE html>
             <link href="{% static 'contenido/css/styles.css'%}" rel="stylesheet" type="text/css">
             <link href="{% static 'contenido/css/icons.css'%}" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
             <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
 
@@ -61,13 +62,25 @@ a<!DOCTYPE html>
                 </div>
 
                 <ul class="nav navbar-nav navbar-right">
+                    <!-- Primer dropdown con ícono de lista -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle navbar-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            &#9776; <b class="caret"></b>
+                            <i class="fas fa-bars"></i> <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'Contacto' %}">Contacto</a></li>
-                            <li><a href="{% url "Cursos" %}">Cursos</a></li>
+                            <li><a href="{% url 'Cursos' %}">Cursos</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Segundo dropdown con ícono de candado -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navbar-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-lock"></i> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url "lista_cursos" %}">Lista de cursos</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

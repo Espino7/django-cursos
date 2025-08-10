@@ -1,0 +1,60 @@
+{% extends "contenido/estructura.html" %}
+{% load static %}
+{% block title %}Cursos{% endblock title %}
+
+{% block contenido %} 
+    <!-- Encabezado -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>
+                Cursos
+                <small>Lista de cursos registrados</small>
+            </h3>
+        </div>
+    </div>
+    <!-- /Encabezado-->
+
+    <!-- Tabla -->
+    <div class="text-right">
+        <a href="{% url 'registrar_curso' %}" class="btn btn-primary mb-3">Agregar Curso</a>
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+                <th>Precio</th>
+                <th>Nivel</th>
+                <th>Disponible</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for curso in cursos %}
+                <tr>
+                    <td>{{ curso.titulo }}</td>
+                    <td>{{ curso.descripcion|truncatechars:50 }}</td>
+                    <td>
+                    {% if curso.imagen %}
+                        <img src="{{ curso.imagen.url }}" alt="Imagen del curso" width="100">
+                    {% else %}
+                        No disponible
+                    {% endif %}
+                    </td>
+                    <td>${{ curso.precio }}</td>
+                    <td>{{ curso.get_nivel_display }}</td>
+                    <td>{{ curso.disponibilidad|yesno:"Sí,No" }}</td>
+                    <td>
+                    <a href="{% url 'editar_curso' curso.id %}" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="{% url 'eliminar_curso' curso.id %}" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="7">No hay cursos disponibles.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <!-- /Tabla -->
+{% endblock %}

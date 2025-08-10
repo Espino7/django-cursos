@@ -1,0 +1,27 @@
+{% extends "contenido/estructura.html" %}
+{% load static %}
+{% block title %} ELIMINAR {% endblock title %}
+
+    <!-- Encabezado -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3> ELIMINAR CONTENIDO</h3>
+        </div>
+    </div>
+    <!-- /Encabezado-->
+
+{% block contenido %} 
+    <form method="POST">
+        {% csrf_token %}
+        <!-- Alerta -->
+        <div class="callout-danger fade in">
+            <h5>Eliminando curso</h5>
+            <p>
+                ¿Estás seguro que deseas <strong>Eliminar</strong> el comentario seleccionado?.
+            </p>
+        </div>
+        <!-- /Alerta -->
+        <button type="submit" class="btn btn-danger">Sí</button>
+        <a href="{% url "lista_cursos" %}" class="btn btn-primary">Cancelar</a>
+    </form>
+{% endblock %}

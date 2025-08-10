@@ -1,0 +1,38 @@
+{% extends "contenido/estructura.html" %}
+{% load static %}
+{% block title %}Actividades{% endblock title %}
+
+{% block contenido %} 
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Actividades
+                <small>Lista de actividades registradas</small>
+            </h3>
+            </div>
+    </div>
+        <a href="{% url 'registrar_actividad' %}" class="btn btn-primary mb-3">Agregar Actividad</a>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Curso</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for actividad in actividades %}
+                <tr>
+                    <td>{{ actividad.titulo.titulo }}</td>
+                    <td>{{ actividad.descripcion|striptags|truncatechars:50 }}</td>
+                    <td>
+                    <a href="{% url 'editar_actividad' actividad.id %}" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="{% url 'eliminar_actividad' actividad.id %}" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="4">No hay actividades disponibles.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endblock %}
